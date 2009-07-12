@@ -237,6 +237,7 @@ void __stdcall %s()
 		data_pointer += 5;
 	}
 }
+
 """ % (interrupt_function_name, declaration_signature, initialisation_function_name, interrupt_function_name, call_addresses, len(intra_module_procedures), marker, new_name, interrupt_function_name, linking_counter, interrupt_function_name, interrupt_function_name)
 	
 	return (includes, variables, main_function, initialisation_function)
