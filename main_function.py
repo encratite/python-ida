@@ -35,7 +35,9 @@ def process_main_function(module_name, image_base, new_name, procedure_lines, of
 		cmp module_base, 0
 		jnz is_already_initialised
 		
+		pushad
 		call %s
+		popad
 		
 	is_already_initialised:
 	
