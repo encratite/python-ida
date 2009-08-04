@@ -69,7 +69,7 @@ def process_main_function(module_name, image_base, new_name, procedure_lines, of
 		tokens = line.split(' ')
 		
 		if len(tokens) == 5 and tokens[1] == '=':
-			if tokens[2] != 'dword' or tokens[3] != 'ptr':
+			if tokens[3] != 'ptr':
 				print 'Unknown definition type: %s' % original_line
 				return None
 			

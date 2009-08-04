@@ -15,7 +15,11 @@ Time of generation: %s
 
 """ % (arguments, time_string)
 	
-	includes, variables, main_function, initialisation_function = process_main_function(module_name, image_base, name, procedure_lines, offsets)
+	main_function_data = process_main_function(module_name, image_base, name, procedure_lines, offsets)
+	if main_function_data == None:
+		sys.exit(1)
+	
+	includes, variables, main_function, initialisation_function = main_function_data
 		
 	output_units = [
 		comment,
